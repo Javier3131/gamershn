@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~ng-tournament-tree/styles/ngtt-styles';
+
+$gamershn-color: #7ed957 !default;
+
+.text-gamershn {
+  color: $gamershn-color;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+

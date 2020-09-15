@@ -1,0 +1,273 @@
+<div class="wrapper">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <h3 class="header-3">Primera División</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-12 ml-auto mr-auto">
+                    <div class="card card-plain">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Jugador</th>
+                                            <th>Plataforma</th>
+                                            <th>Id</th>
+                                            <th>Partidas</th>
+                                            <th>Kills</th>
+                                            <th>1 LS</th>
+                                            <th>1 LSQ</th>
+                                            <th>2 L</th>
+                                            <th>3 L</th>
+                                            <th>Puntos</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let p of puntos1; index as i;">
+                                            <td>{{p.nombre}} - {{p.alias}}</td>
+                                            <td>
+                                                <input class="form-control" type="text" name="plataforma"
+                                                    id="plataforma" [(ngModel)]="p.plataforma">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="text" name="gameId" id="gameId"
+                                                    [(ngModel)]="p.gameId">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="text" name="partidas" id="partidas"
+                                                    [(ngModel)]="p.partidas">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="text" name="kills" id="kills"
+                                                    [(ngModel)]="p.kills">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="text" name="ls1" id="ls1"
+                                                    [(ngModel)]="p.ls1">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="text" name="lsq1" id="lsq1"
+                                                    [(ngModel)]="p.lsq1">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="text" name="l2" id="l2"
+                                                    [(ngModel)]="p.l2">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="text" name="l3" id="l3"
+                                                    [(ngModel)]="p.l3">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" min="0" type="number" name="puntos"
+                                                    id="puntos" [(ngModel)]="p.puntos">
+                                            </td>
+                                            <td class="td-actions text-right">
+                                                <button type="button" ngbTooltip="Actualizar"
+                                                    (click)="onUpdatePuntos(p)" class="btn btn-info btn-icon btn-sm">
+                                                    <i class="fa fa-save"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h3 class="header-3">Segunda División</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-12 ml-auto mr-auto">
+                    <div class="card card-plain">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Jugador</th>
+                                            <th>Plataforma</th>
+                                            <th>Id</th>
+                                            <th>Partidas</th>
+                                            <th>Kills</th>
+                                            <th>1 LS</th>
+                                            <th>1 LSQ</th>
+                                            <th>2 L</th>
+                                            <th>3 L</th>
+                                            <th>Puntos</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let p of puntos2; index as i;">
+                                            <td>{{p.nombre}} - {{p.alias}}</td>
+                                            <td>
+                                                <input class="form-control" type="text" name="plataforma"
+                                                    id="plataforma" [(ngModel)]="p.plataforma">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="text" name="gameId" id="gameId"
+                                                    [(ngModel)]="p.gameId">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="number" name="partidas" id="partidas"
+                                                    [(ngModel)]="p.partidas">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="number" name="kills" id="kills"
+                                                    [(ngModel)]="p.kills">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="number" name="ls1" id="ls1"
+                                                    [(ngModel)]="p.ls1">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="number" name="lsq1" id="lsq1"
+                                                    [(ngModel)]="p.lsq1">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="number" name="l2" id="l2"
+                                                    [(ngModel)]="p.l2">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="number" name="l3" id="l3"
+                                                    [(ngModel)]="p.l3">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" min="0" type="number" name="puntos"
+                                                    id="puntos" [(ngModel)]="p.puntos">
+                                            </td>
+                                            <td class="td-actions text-right">
+                                                <button type="button" ngbTooltip="Actualizar"
+                                                    (click)="onUpdatePuntos(p)" class="btn btn-info btn-icon btn-sm">
+                                                    <i class="fa fa-save"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+
+            <div class="row">
+                <div class="col-md-12 ml-auto mr-auto">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <input type="text" class="form-control" placeholder="Nombre..."
+                                    [(ngModel)]="nuevoP.nombre">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Alias</label>
+                                <input type="text" class="form-control" placeholder="Alias..."
+                                    [(ngModel)]="nuevoP.alias">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Correo</label>
+                                <input type="text" class="form-control" placeholder="Correo..."
+                                    [(ngModel)]="nuevoP.correo">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Liga</label>
+                                <input type="number" class="form-control" placeholder="Liga..."
+                                    [(ngModel)]="nuevoP.liga">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Plataforma</label>
+                                <input type="text" class="form-control" placeholder="Plataforma"
+                                    [(ngModel)]="nuevoP.plataforma">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>ID</label>
+                                <input type="text" class="form-control" placeholder="ID" [(ngModel)]="nuevoP.gameId">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Partidas</label>
+                                <input type="number" class="form-control" placeholder="Partidas"
+                                    [(ngModel)]="nuevoP.partidas">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Kills</label>
+                                <input type="number" class="form-control" placeholder="Kills"
+                                    [(ngModel)]="nuevoP.kills">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>1LS</label>
+                                <input type="number" class="form-control" placeholder="1LS" [(ngModel)]="nuevoP.ls1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>1LSQ</label>
+                                <input type="number" class="form-control" placeholder="1LSQ" [(ngModel)]="nuevoP.lsq1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>2L</label>
+                                <input type="number" class="form-control" placeholder="2L" [(ngModel)]="nuevoP.l2">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>3L</label>
+                                <input type="number" class="form-control" placeholder="3L" [(ngModel)]="nuevoP.l3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Puntos</label>
+                                <input type="number" class="form-control" placeholder="Puntos"
+                                    [(ngModel)]="nuevoP.puntos">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn btn-round btn-primary" (click)="onCreatePuntos()">Agregar</button>
+            </div>
+        </div>
+    </div>
+
+</div>
